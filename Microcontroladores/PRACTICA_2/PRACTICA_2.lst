@@ -1,4 +1,4 @@
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  1
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -16,7 +16,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00008 ;GUERRERO SANTANA EDGAR GEOVANNY
                       00009 ;FECHA: 18/09/2023
                       00010 
-                      00011                 LIST P=16F887                   ;INDICA EL MICRO QUE SEVA A PROGRAMAR
+                      00011                 LIST P=16F887                           ;INDICA EL MICRO QUE SEVA A PROGRAMAR
                       00012                 INCLUDE "P16F887.INC"           ;CARGA LA LIBRERIA DEL MICRO QUE USAREMOS
                       00001         LIST
                       00002 
@@ -27,28 +27,48 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00007 ;==========================================================================
                       00008 
                       00809         LIST
-                      00013 ;DATO           EQU 8x20                        ;DECLARAMOS UN REGISTRO LLAMADO DATO EN LA DIR 20 HEX
-0000                  00014                 ORG 0x00                        ;INDICA QUE EL PROGRAMA EMPIEZA EN LA DIRECCIÓN 0
-0000   2801           00015                 GOTO INICIO                     ;IR A LA ETIQUETA INICIO
+                      00013                 ;DATO           EQU 8x20                ;DECLARAMOS UN REGISTRO LLAMADO DATO EN LA DIR 2
+                            0 HEX
+0000                  00014                 ORG 0x00                                        ;INDICA QUE EL PROGRAMA EMPIEZA EN LA DI
+                            RECCIÓN 0
+0000   2801           00015                 GOTO INICIO                                     ;IR A LA ETIQUETA INICIO
                       00016 
-0001   1683           00017 INICIO          BSF STATUS,RP0                  ;PONE EN 1 EL BIT RP0 DEL STATUS
-0002   1703           00018                 BSF STATUS,RP1                  ;PONE EN 1 EL BIT RP1 DEL STATUS (Nos mandan al banco 3)
+0001   1683           00017 INICIO  BSF STATUS,RP0                          ;PONE EN 1 EL BIT RP0 DEL STATUS
+0002   1703           00018                 BSF STATUS,RP1                          ;PONE EN 1 EL BIT RP1 DEL STATUS (Nos mandan al 
+                            banco 3)
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0003   0188           00019                 CLRF ANSEL                      ;PONE EN ENTRADAS O SALIDAS DIGITALES A LOS PORTA Y PORT
-                            E
+0003   0188           00019                 CLRF ANSEL                                      ;PONE EN ENTRADAS O SALIDAS DIGITALES A 
+                            LOS PORTA Y PORTE
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0004   0189           00020                 CLRF ANSELH                             ;PONE EN E/S DIGITAL EL PORTB
+0004   0189           00020                 CLRF ANSELH                                     ;PONE EN E/S DIGITAL EL PORTB
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0005   0186           00021                 CLRF TRISB                      ;PONE EN SALIDA AL PORTB
+0005   0186           00021                 CLRF TRISB                                      ;PONE EN SALIDA AL PORTB
 0006   1283           00022                 BCF STATUS,RP0
-0007   1303           00023                 BCF STATUS,RP1                  ;PONE LOS BITS EN 0 Y NOS MANDA AL BANCO 0
+0007   1303           00023                 BCF STATUS,RP1                          ;PONE LOS BITS EN 0 Y NOS MANDA AL BANCO 0
                       00024 
-0008   0805           00025 CICLO           MOVF PORTA,W                    ;MOVEMOS EL PORTA AL REGISTRO W
-0009   0086           00026                 MOVWF PORTB                     ;MOVEMOS EL REGISTRO W AL PORTB                         
-                                            
-000A   2808           00027                 GOTO CICLO                      ;IR A LA ETIQUETA CICLO(SE CICLA)
-                      00028                 END                             ;INDICA EL FIN DEL PROGRAMA                     
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  2
+                      00025 
+                      00026         
+                      00027     
+                      00028                         
+0008   0805           00029 CICLO           MOVF PORTA,W                            ;MOVEMOS EL PORTA AL REGISTRO W
+0009   0780           00030 MULTIPLICAR ADDWF W, F                                  ; Sumar WREG + WREG y almacenar el resultado en 
+                            WREG
+000A   2809           00031                         GOTO MULTIPLICAR
+000B   2809           00032                         GOTO MULTIPLICAR
+000C   2809           00033                         GOTO MULTIPLICAR
+000D   0086           00034                         MOVWF PORTB                                     ;MOVEMOS EL REGISTRO W AL PORTB 
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE  2
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                                                                    
+000E   2808           00035                         GOTO CICLO                                      ;IR A LA ETIQUETA CICLO(SE CICLA
+                            )
+                      00036                         END                                                     ;INDICA EL FIN DEL PROGR
+                            AMA                     
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE  3
 
 
 SYMBOL TABLE
@@ -107,7 +127,7 @@ BRG6                              00000006
 BRG7                              00000007
 BRG8                              00000000
 BRG9                              00000001
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  3
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE  4
 
 
 SYMBOL TABLE
@@ -166,7 +186,7 @@ CHS0                              00000002
 CHS1                              00000003
 CHS2                              00000004
 CHS3                              00000005
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  4
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE  5
 
 
 SYMBOL TABLE
@@ -225,7 +245,7 @@ INTE                              00000004
 INTEDG                            00000006
 INTF                              00000001
 IOCB                              00000096
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  5
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE  6
 
 
 SYMBOL TABLE
@@ -255,6 +275,7 @@ MSK4                              00000004
 MSK5                              00000005
 MSK6                              00000006
 MSK7                              00000007
+MULTIPLICAR                       00000009
 NOT_A                             00000005
 NOT_ADDRESS                       00000005
 NOT_BO                            00000000
@@ -283,13 +304,13 @@ PCL                               00000002
 PCLATH                            0000000A
 PCON                              0000008E
 PDC0                              00000000
-PDC1                              00000001
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  6
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE  7
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+PDC1                              00000001
 PDC2                              00000002
 PDC3                              00000003
 PDC4                              00000004
@@ -342,13 +363,13 @@ RBIF                              00000000
 RC0                               00000000
 RC1                               00000001
 RC2                               00000002
-RC3                               00000003
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  7
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE  8
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+RC3                               00000003
 RC4                               00000004
 RC5                               00000005
 RC6                               00000006
@@ -401,13 +422,13 @@ SSPADD                            00000093
 SSPBUF                            00000013
 SSPCON                            00000014
 SSPCON2                           00000091
-SSPEN                             00000005
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  8
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE  9
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+SSPEN                             00000005
 SSPIE                             00000003
 SSPIF                             00000003
 SSPM0                             00000000
@@ -460,13 +481,13 @@ TOUTPS0                           00000003
 TOUTPS1                           00000004
 TOUTPS2                           00000005
 TOUTPS3                           00000006
-TRISA                             00000085
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  9
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE 10
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+TRISA                             00000085
 TRISA0                            00000000
 TRISA1                            00000001
 TRISA2                            00000002
@@ -519,13 +540,13 @@ TX9D                              00000000
 TXD8                              00000000
 TXEN                              00000005
 TXIE                              00000004
-TXIF                              00000004
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE 10
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE 11
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+TXIF                              00000004
 TXREG                             00000019
 TXSTA                             00000098
 UA                                00000001
@@ -578,13 +599,13 @@ _BOR_ON                           00003FFF
 _BOR_SBODEN                       00003DFF
 _CONFIG1                          00002007
 _CONFIG2                          00002008
-_CPD_OFF                          00003FFF
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE 11
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE 12
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
+_CPD_OFF                          00003FFF
 _CPD_ON                           00003F7F
 _CP_OFF                           00003FFF
 _CP_ON                            00003FBF
@@ -634,18 +655,18 @@ _WRT_HALF                         000039FF
 _WRT_OFF                          00003FFF
 _XT_OSC                           00003FF9
 __16F887                          00000001
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE 12
+MPASM  5.44                    PRACTICA_2.ASM   9-25-2023  15:47:10         PAGE 13
 
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
 
 
-0000 : XXXXXXXXXXX----- ---------------- ---------------- ----------------
+0000 : XXXXXXXXXXXXXXX- ---------------- ---------------- ----------------
 
 All other memory blocks unused.
 
-Program Memory Words Used:    11
-Program Memory Words Free:  8181
+Program Memory Words Used:    15
+Program Memory Words Free:  8177
 
 
 Errors   :     0
