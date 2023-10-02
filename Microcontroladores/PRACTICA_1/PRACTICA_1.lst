@@ -1,4 +1,4 @@
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  1
+MPASM  5.44                    PRACTICA_1.ASM   10-2-2023  15:29:04         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -48,7 +48,7 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
                                             
 000A   2808           00027                 GOTO CICLO                      ;IR A LA ETIQUETA CICLO(SE CICLA)
                       00028                 END                             ;INDICA EL FIN DEL PROGRAMA                     
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  2
+MPASM  5.44                    PRACTICA_1.ASM   10-2-2023  15:29:04         PAGE  2
 
 
 SYMBOL TABLE
@@ -107,7 +107,7 @@ BRG6                              00000006
 BRG7                              00000007
 BRG8                              00000000
 BRG9                              00000001
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  3
+MPASM  5.44                    PRACTICA_1.ASM   10-2-2023  15:29:04         PAGE  3
 
 
 SYMBOL TABLE
@@ -166,7 +166,7 @@ CHS0                              00000002
 CHS1                              00000003
 CHS2                              00000004
 CHS3                              00000005
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  4
+MPASM  5.44                    PRACTICA_1.ASM   10-2-2023  15:29:04         PAGE  4
 
 
 SYMBOL TABLE
@@ -225,7 +225,7 @@ INTE                              00000004
 INTEDG                            00000006
 INTF                              00000001
 IOCB                              00000096
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  5
+MPASM  5.44                    PRACTICA_1.ASM   10-2-2023  15:29:04         PAGE  5
 
 
 SYMBOL TABLE
@@ -284,7 +284,7 @@ PCLATH                            0000000A
 PCON                              0000008E
 PDC0                              00000000
 PDC1                              00000001
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  6
+MPASM  5.44                    PRACTICA_1.ASM   10-2-2023  15:29:04         PAGE  6
 
 
 SYMBOL TABLE
@@ -343,7 +343,7 @@ RC0                               00000000
 RC1                               00000001
 RC2                               00000002
 RC3                               00000003
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  7
+MPASM  5.44                    PRACTICA_1.ASM   10-2-2023  15:29:04         PAGE  7
 
 
 SYMBOL TABLE
@@ -402,7 +402,7 @@ SSPBUF                            00000013
 SSPCON                            00000014
 SSPCON2                           00000091
 SSPEN                             00000005
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  8
+MPASM  5.44                    PRACTICA_1.ASM   10-2-2023  15:29:04         PAGE  8
 
 
 SYMBOL TABLE
@@ -461,7 +461,7 @@ TOUTPS1                           00000004
 TOUTPS2                           00000005
 TOUTPS3                           00000006
 TRISA                             00000085
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE  9
+MPASM  5.44                    PRACTICA_1.ASM   10-2-2023  15:29:04         PAGE  9
 
 
 SYMBOL TABLE
@@ -520,7 +520,7 @@ TXD8                              00000000
 TXEN                              00000005
 TXIE                              00000004
 TXIF                              00000004
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE 10
+MPASM  5.44                    PRACTICA_1.ASM   10-2-2023  15:29:04         PAGE 10
 
 
 SYMBOL TABLE
@@ -579,7 +579,7 @@ _BOR_SBODEN                       00003DFF
 _CONFIG1                          00002007
 _CONFIG2                          00002008
 _CPD_OFF                          00003FFF
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE 11
+MPASM  5.44                    PRACTICA_1.ASM   10-2-2023  15:29:04         PAGE 11
 
 
 SYMBOL TABLE
@@ -634,7 +634,7 @@ _WRT_HALF                         000039FF
 _WRT_OFF                          00003FFF
 _XT_OSC                           00003FF9
 __16F887                          00000001
-MPASM  5.44                    PRACTICA_1.ASM   9-25-2023  15:03:04         PAGE 12
+MPASM  5.44                    PRACTICA_1.ASM   10-2-2023  15:29:04         PAGE 12
 
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)

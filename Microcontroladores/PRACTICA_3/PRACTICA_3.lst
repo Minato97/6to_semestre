@@ -1,0 +1,86 @@
+MPASM  5.44                    PRACTICA_3.ASM   10-2-2023  15:45:56         PAGE  1
+
+
+LOC  OBJECT CODE     LINE SOURCE TEXT
+  VALUE
+
+                      00001 ;PROGRAMA TAREA PRÁCTICA 3. REALICE UN PROGRAMA PARA EL PIC16F887, CON EL
+                      00002 ;PUERTO A CONFIGURADO COMO ENTRADA DIGITAL Y EL PUERTO B COMO SALIDA. EL DATO
+                      00003 ;QUE ENTRE POR EL PUERTO A, DEBERÁ MOSTRARSE EN EL PUERTO B MULTIPLICADO POR
+                      00004 ;CUALQUIER OTRA CANTIDAD.
+                      00005 ;EL PROGRAMA SERÁ CICLICO O SE EJECUTARÁ DE MANERA INDEFINIDA.
+                      00006 ;FECHA 11 DE NOVIEMBRE DE 2020
+                      00007 ;REALIZADO POR JOSÉ DE JESÚS VARO GONZÁLEZ
+                      00008 
+                      00009                         LIST P=16F887           ;ELEGIR EL PIC
+Error[105]  : Cannot open file (Include File ""P16F887.INC"   CARGA LA LIBRERIA DEL PIC" not found)
+                      00010                         INCLUDE "P16F887.INC"   CARGA LA LIBRERIA DEL PIC
+Error[113]  : Symbol not previously defined (OX20)
+  00000000            00011 CONTA   EQU     OX20                    
+0000                  00012                         ORG     0X00            ;INDICA EL ORIGEN DEL PROG
+0000   2801           00013                         GOTO    INICIO          ;SALTAR A LA ETIQUETA INICIO
+0001                  00014 INICIO
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (RP0)
+0001   1400           00015                         BSF     STATUS,RP0      ;PONE EN 1 RP0 DEL STATUS
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (RP1)
+0002   1400           00016                         BSF     STATUS,RP1      ;PONE EN 1 RP1 DEL STATUS
+                      00017                         ;ESTAS DOS INSTRUCCIONES NOS MANDADN AL BANCO 3
+Error[113]  : Symbol not previously defined (PORTB)
+0003   0180           00018                         CLRF    PORTB           ;PORTA COMO IN/OUT DIGITAL
+Error[113]  : Symbol not previously defined (ANSEL)
+0004   0180           00019                         CLRF    ANSEL           ;PORTB COMO IN/OUT DIGITAL
+Error[113]  : Symbol not previously defined (ANSELH)
+0005   0180           00020                         CLRF    ANSELH          ;PORTB CONFIGURADO COMO OUT
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (RP0)
+0006   1000           00021                         BCF     STATUS,RP0      ;PONE EN 0 RP0 DEL STATUS
+Error[113]  : Symbol not previously defined (STATUS)
+Error[113]  : Symbol not previously defined (RP1)
+0007   1000           00022                         BCF     STATUS,RP1      ;PONE EN 0 RP1 DEL STATUS                               
+                                                                    
+                      00023                         ;MANDAN AL BANCO 0
+                      00024                         
+0008   3005           00025 REGRESA         MOVLW   5
+0009   0080           00026                         MOVWF   CONTA           ;MUEVE PORTA -> W
+Error[113]  : Symbol not previously defined (PORTA)
+000A   0800           00027                         MOVF    PORTA,W
+Error[113]  : Symbol not previously defined (PORTA)
+000B   0700           00028 SUMA                    ADDWF   PORTA,W
+Message[305]: Using default destination of 1 (file).
+000C   0B80           00029                         DECFSZ  CONTA
+000D   280B           00030                         GOTO    SUMA
+Error[113]  : Symbol not previously defined (PORTB)
+000E   0080           00031                         MOVWF   PORTB
+000F   2808           00032                         GOTO    REGRESA
+                      00033                         END
+MPASM  5.44                    PRACTICA_3.ASM   10-2-2023  15:45:56         PAGE  2
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
+CONTA                             00000000
+INICIO                            00000001
+REGRESA                           00000008
+SUMA                              0000000B
+__16F887                          00000001
+__DEBUG                           1
+
+
+MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
+
+0000 : XXXXXXXXXXXXXXXX ---------------- ---------------- ----------------
+
+All other memory blocks unused.
+
+Program Memory Words Used:    16
+Program Memory Words Free:  8176
+
+
+Errors   :    16
+Warnings :     0 reported,     0 suppressed
+Messages :     1 reported,     0 suppressed
+
+
