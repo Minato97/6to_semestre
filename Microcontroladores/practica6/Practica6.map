@@ -1,0 +1,38 @@
+MPLINK 4.42, Linker
+Linker Map File - Created Wed Nov 01 18:42:26 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000030
+                   .cinit    romdata   0x000018    program   0x000004
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x000019      
+            26 out of 8455 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000001    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\practica6\practica6.asm
+                     LEER   0x000008    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\practica6\practica6.asm
+                    LOOP1   0x000013    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\practica6\practica6.asm
+                     TIME   0x00000f    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\practica6\practica6.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000001    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\practica6\practica6.asm
+                     LEER   0x000008    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\practica6\practica6.asm
+                     TIME   0x00000f    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\practica6\practica6.asm
+                    LOOP1   0x000013    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\practica6\practica6.asm
+
+
