@@ -1,0 +1,168 @@
+MPLINK 4.42, Linker
+Linker Map File - Created Mon Nov 06 15:11:18 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x0003c2
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x0001e0      
+            481 out of 8455 program addresses used, program memory utilization is 5%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   APAGAR   0x0001c8    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                     AQUI   0x0001da    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 ENCENDER   0x000048    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER10   0x0000a2    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER11   0x0000ac    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER12   0x0000b6    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER13   0x0000c0    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER14   0x0000ca    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER15   0x0000d4    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER16   0x0000de    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER17   0x000128    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER18   0x000132    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER19   0x00013c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER2   0x000052    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER20   0x000146    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER21   0x000150    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER22   0x00015a    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER23   0x000164    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER24   0x00016e    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER25   0x000178    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER26   0x000182    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER27   0x00018c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER28   0x000196    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER29   0x0001a0    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER3   0x00005c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER30   0x0001aa    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER31   0x0001b4    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER32   0x0001be    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER4   0x000066    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER5   0x000070    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER6   0x00007a    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER7   0x000084    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER8   0x00008e    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER9   0x000098    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                   INICIO   0x000001    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                     LEER   0x0001d1    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                   SELECT   0x000008    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT10   0x00002c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT11   0x000030    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT12   0x000034    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT13   0x000038    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT14   0x00003c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT15   0x000040    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT16   0x000044    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT17   0x0000e8    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT18   0x0000ec    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT19   0x0000f0    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT2   0x00000c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT20   0x0000f4    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT21   0x0000f8    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT22   0x0000fc    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT23   0x000100    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT24   0x000104    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT25   0x000108    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT26   0x00010c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT27   0x000110    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT28   0x000114    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT29   0x000118    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT3   0x000010    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT30   0x00011c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT31   0x000120    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT32   0x000124    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT4   0x000014    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT5   0x000018    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT6   0x00001c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT7   0x000020    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT8   0x000024    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT9   0x000028    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                     TIME   0x0001d4    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000001    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                   SELECT   0x000008    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT2   0x00000c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT3   0x000010    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT4   0x000014    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT5   0x000018    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT6   0x00001c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT7   0x000020    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT8   0x000024    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                  SELECT9   0x000028    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT10   0x00002c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT11   0x000030    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT12   0x000034    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT13   0x000038    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT14   0x00003c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT15   0x000040    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT16   0x000044    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 ENCENDER   0x000048    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER2   0x000052    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER3   0x00005c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER4   0x000066    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER5   0x000070    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER6   0x00007a    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER7   0x000084    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER8   0x00008e    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                ENCENDER9   0x000098    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER10   0x0000a2    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER11   0x0000ac    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER12   0x0000b6    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER13   0x0000c0    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER14   0x0000ca    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER15   0x0000d4    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER16   0x0000de    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT17   0x0000e8    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT18   0x0000ec    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT19   0x0000f0    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT20   0x0000f4    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT21   0x0000f8    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT22   0x0000fc    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT23   0x000100    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT24   0x000104    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT25   0x000108    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT26   0x00010c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT27   0x000110    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT28   0x000114    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT29   0x000118    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT30   0x00011c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT31   0x000120    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                 SELECT32   0x000124    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER17   0x000128    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER18   0x000132    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER19   0x00013c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER20   0x000146    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER21   0x000150    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER22   0x00015a    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER23   0x000164    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER24   0x00016e    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER25   0x000178    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER26   0x000182    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER27   0x00018c    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER28   0x000196    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER29   0x0001a0    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER30   0x0001aa    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER31   0x0001b4    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+               ENCENDER32   0x0001be    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                   APAGAR   0x0001c8    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                     LEER   0x0001d1    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                     TIME   0x0001d4    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+                     AQUI   0x0001da    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_8\PRACTICA_8.ASM
+
+

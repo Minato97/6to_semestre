@@ -1,4 +1,4 @@
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE  1
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
 000E   284C           00039                         GOTO    ENCENDER1
 000F   288B           00040                         GOTO    APAGAR
 0010   2088           00041 SELECT2         CALL            LEER
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE  2
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -116,7 +116,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0043   288B           00092                         GOTO    APAGAR
 0044   2088           00093 SELECTF         CALL            LEER
 0045   1D03           00094                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE  3
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE  3
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -175,7 +175,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0077   2838           00145                         GOTO    SELECTC 
 0078   3039           00146 ENCENDERC       MOVLW   B'00111001'     ;C
 0079   0086           00147                         MOVWF   PORTB
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE  4
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE  4
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -220,7 +220,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 0098   2893           00184                         GOTO    AQUI
 0099   0008           00185                         RETURN
                       00186                         END
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE  5
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE  5
 
 
 SYMBOL TABLE
@@ -279,7 +279,7 @@ BRG4                              00000004
 BRG5                              00000005
 BRG6                              00000006
 BRG7                              00000007
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE  6
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE  6
 
 
 SYMBOL TABLE
@@ -338,7 +338,7 @@ CCPR2H                            0000001C
 CCPR2L                            0000001B
 CHS0                              00000002
 CHS1                              00000003
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE  7
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE  7
 
 
 SYMBOL TABLE
@@ -397,7 +397,7 @@ F                                 00000001
 FERR                              00000002
 FSR                               00000004
 FVREN                             00000000
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE  8
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE  8
 
 
 SYMBOL TABLE
@@ -456,7 +456,7 @@ NOT_RBPU                          00000007
 NOT_RC8                           00000006
 NOT_T1SYNC                        00000002
 NOT_TO                            00000004
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE  9
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE  9
 
 
 SYMBOL TABLE
@@ -515,7 +515,7 @@ R0                                00000020
 R1                                00000021
 R2                                00000022
 RA0                               00000000
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE 10
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE 10
 
 
 SYMBOL TABLE
@@ -574,7 +574,7 @@ RP1                               00000006
 RSEN                              00000001
 RX9                               00000006
 RX9D                              00000000
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE 11
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE 11
 
 
 SYMBOL TABLE
@@ -633,7 +633,7 @@ STRC                              00000002
 STRD                              00000003
 STRSYNC                           00000004
 SWDTEN                            00000000
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE 12
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE 12
 
 
 SYMBOL TABLE
@@ -692,7 +692,7 @@ TRISB2                            00000002
 TRISB3                            00000003
 TRISB4                            00000004
 TRISB5                            00000005
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE 13
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE 13
 
 
 SYMBOL TABLE
@@ -751,7 +751,7 @@ VR3                               00000003
 VRCON                             00000097
 VREN                              00000007
 VROE                              00000006
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE 14
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE 14
 
 
 SYMBOL TABLE
@@ -810,7 +810,7 @@ _FCMEN_OFF                        000037FF
 _FCMEN_ON                         00003FFF
 _FOSC_EC                          00003FFB
 _FOSC_EXTRC_CLKOUT                00003FFF
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE 15
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE 15
 
 
 SYMBOL TABLE
@@ -850,6 +850,7 @@ _WRT_HALF                         000039FF
 _WRT_OFF                          00003FFF
 _XT_OSC                           00003FF9
 __16F887                          00000001
+__DEBUG                           1
 
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
@@ -864,7 +865,7 @@ Program Memory Words Used:   154
 Program Memory Words Free:  8038
 
 
-MPASM  5.44                    PRACTICA_7.ASM   11-4-2023  15:04:20         PAGE 16
+MPASM  5.44                    PRACTICA_7.ASM   11-6-2023  14:14:44         PAGE 16
 
 
 
