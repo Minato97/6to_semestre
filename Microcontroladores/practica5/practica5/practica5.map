@@ -1,0 +1,36 @@
+MPLINK 4.42, Linker
+Linker Map File - Created Mon Oct 23 15:15:07 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x00003c
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00001d      
+            30 out of 8455 program addresses used, program memory utilization is 0%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                  DISPLAY   0x00000d    program     static C:\Users\giohp\OneDrive\Escritorio\Universidad\Semestre 6\Microcontroladores\practica5\practica5.asm
+                   INICIO   0x000001    program     static C:\Users\giohp\OneDrive\Escritorio\Universidad\Semestre 6\Microcontroladores\practica5\practica5.asm
+                    START   0x000008    program     static C:\Users\giohp\OneDrive\Escritorio\Universidad\Semestre 6\Microcontroladores\practica5\practica5.asm
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000001    program     static C:\Users\giohp\OneDrive\Escritorio\Universidad\Semestre 6\Microcontroladores\practica5\practica5.asm
+                    START   0x000008    program     static C:\Users\giohp\OneDrive\Escritorio\Universidad\Semestre 6\Microcontroladores\practica5\practica5.asm
+                  DISPLAY   0x00000d    program     static C:\Users\giohp\OneDrive\Escritorio\Universidad\Semestre 6\Microcontroladores\practica5\practica5.asm
+
+

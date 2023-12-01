@@ -1,0 +1,48 @@
+MPLINK 4.42, Linker
+Linker Map File - Created Thu Nov 23 16:01:20 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+                   .org_0       code   0x000000    program   0x000000
+                   .org_1       code   0x000000    program   0x0000de
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00006e      
+            111 out of 8455 program addresses used, program memory utilization is 1%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                     AQUI   0x00005f    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                    AQUI2   0x00006a    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                   BUZZER   0x000050    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                   CUENTA   0x000012    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                      ESO   0x000052    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                  ESPERAR   0x00000f    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                   INICIO   0x000001    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                     TIME   0x000059    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                    TIME2   0x000066    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   INICIO   0x000001    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                  ESPERAR   0x00000f    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                   CUENTA   0x000012    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                   BUZZER   0x000050    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                      ESO   0x000052    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                     TIME   0x000059    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                     AQUI   0x00005f    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                    TIME2   0x000066    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+                    AQUI2   0x00006a    program     static C:\Users\Nacho Andrade\Desktop\Ingeniería en electrónica y computación\6to_semestre\Microcontroladores\PRACTICA_9\PRACTICA_9.ASM
+
+

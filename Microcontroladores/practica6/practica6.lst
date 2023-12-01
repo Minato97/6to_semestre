@@ -1,4 +1,4 @@
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE  1
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -57,7 +57,7 @@ Message[302]: Register in operand not in bank 0.  Ensure that bank bits are corr
 0010   2???           00039                         GOTO    ENCENDER2
 0011   2???           00040                         GOTO    APAGAR
                       00041 
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE  2
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
@@ -110,7 +110,7 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
 003A   2???           00086                         GOTO    AQUI
 003B   0008           00087                         RETURN
                       00088                         END
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE  3
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE  3
 
 
 SYMBOL TABLE
@@ -169,7 +169,7 @@ BRG4                              00000004
 BRG5                              00000005
 BRG6                              00000006
 BRG7                              00000007
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE  4
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE  4
 
 
 SYMBOL TABLE
@@ -228,7 +228,7 @@ CCPR2H                            0000001C
 CCPR2L                            0000001B
 CHS0                              00000002
 CHS1                              00000003
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE  5
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE  5
 
 
 SYMBOL TABLE
@@ -287,7 +287,7 @@ INDF                              00000000
 INICIO                            00000001
 INTCON                            0000000B
 INTE                              00000004
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE  6
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE  6
 
 
 SYMBOL TABLE
@@ -346,7 +346,7 @@ OSTS                              00000003
 P                                 00000004
 P1M0                              00000006
 P1M1                              00000007
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE  7
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE  7
 
 
 SYMBOL TABLE
@@ -405,7 +405,7 @@ RB2                               00000002
 RB3                               00000003
 RB4                               00000004
 RB5                               00000005
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE  8
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE  8
 
 
 SYMBOL TABLE
@@ -464,7 +464,7 @@ SPBRG                             00000099
 SPBRGH                            0000009A
 SPEN                              00000007
 SR0                               00000006
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE  9
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE  9
 
 
 SYMBOL TABLE
@@ -523,7 +523,7 @@ TMR1IE                            00000000
 TMR1IF                            00000000
 TMR1L                             0000000E
 TMR1ON                            00000000
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE 10
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE 10
 
 
 SYMBOL TABLE
@@ -582,7 +582,7 @@ TRMT                              00000001
 TUN0                              00000000
 TUN1                              00000001
 TUN2                              00000002
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE 11
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE 11
 
 
 SYMBOL TABLE
@@ -641,7 +641,7 @@ _BOR4V_BOR21V                     00003EFF
 _BOR4V_BOR40V                     00003FFF
 _BOREN_NSLEEP                     00003EFF
 _BOREN_OFF                        00003CFF
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE 12
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE 12
 
 
 SYMBOL TABLE
@@ -700,7 +700,7 @@ _WDTE_ON                          00003FFF
 _WDT_OFF                          00003FF7
 _WDT_ON                           00003FFF
 _WRT_1FOURTH                      00003BFF
-MPASM  5.44                     PRACTICA6.ASM   11-6-2023  15:35:28         PAGE 13
+MPASM  5.44                     PRACTICA6.ASM   11-23-2023  15:05:22         PAGE 13
 
 
 SYMBOL TABLE

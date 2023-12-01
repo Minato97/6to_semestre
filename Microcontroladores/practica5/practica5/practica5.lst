@@ -1,25 +1,23 @@
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE  1
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE  1
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-                      00001 ;PRÁCTICA 7. CONTADOR DEL 0 A F
-                      00002 ;REALICE UN PROGRAMA PARA EL PIC16F887 
-                      00003 ;CON EL PUERTO A CONFIGURADO COMO ENTRADA DIGITAL 
-                      00004 ;Y UN BIT DEL PUERTO B COMO SALIDA, 
-                      00005 ;CUANDO SE ACTIVE UN BIT DEL PUERTO A, 
-                      00006 ;A TRAVÉS DEL PUERTO B SE DEBERÁN MOSTRAR LOS NÚMEROS DEL 0 AL F 
-                      00007 ;EN EL DISPLAY, SI EL BIT DE ACTIVACIÓN DE APAGA, 
-                      00008 ;DE INMEDIATO EL DISPLAY SE APAGARÁ. EL PROGRAMA SERÁ CÍCLICO.
-                      00009 ;ANDRADE SALAZAR IGNACIO
-                      00010 ;ORTIZ JIMENEZ VLADIMIR
-                      00011 ;GUERRERO SANTANA EDGAR GEOVANNY
-                      00012 ;FECHA: 30/10/2023
-                      00013 
-                      00014 
-                      00015         LIST P=16F887           ;ELEGIR EL PIC
-                      00016                         INCLUDE "P16F887.INC"   ;CARGA LA LIBRERIA DEL PIC
+                      00001 ;ENUNCIADO DEL PROBLEMA
+                      00002 ;PRÁCTICA 5: DECODIFICADOR DE 0-F
+                      00003 ;REALICE UN PROGRAMA PARA EL PIC16F887, CON EL PUERTO A CONFIGURADO COMO ENTRADA DIGITAL 
+                      00004 ;Y EL B COMO SALIDA. LOS 4 BITS MENOS SIGNIFICATIVOS DEL PUERTO A, DETERMINARÁN EL DÍGITO 
+                      00005 ;QUE SE MOSTRARÁ EN EL DISPLAY DE 7 SEGMENTOS QUE SE CONECTARÁ EN EL PUERTO B. POR EJEMPLO, 
+                      00006 ;SI EN LA ENTRADA SE INTRODUCE EL 0101, EN LA SALIDA DEBERÁ MOSTRARSE EL 5. USAR TABLA DE DATOS.
+                      00007 ;INTEGRANTES:
+                      00008 ;ANDRADE SALAZAR IGNACIO
+                      00009 ;ORTIZ JIMENEZ VLADIMIR
+                      00010 ;GUERRERO SANTANA EDGAR GEOVANNY
+                      00011 ;FECHA: 09/10/2023
+                      00012 
+                      00013                         LIST P=16F887                   ;ELEGIR EL PIC
+                      00014                         INCLUDE "P16F887.INC"   ;CARGA LA LIBRERIA DEL PIC
                       00001         LIST
                       00002 
                       00003 ;==========================================================================
@@ -29,198 +27,49 @@ LOC  OBJECT CODE     LINE SOURCE TEXT
                       00007 ;==========================================================================
                       00008 
                       00809         LIST
-  00000020            00017 R0      EQU     0X20
-  00000021            00018 R1      EQU     0X21
-  00000022            00019 R2      EQU     0X22
-0000                  00020                         ORG     0X00            ;INDICA EL ORIGEN DEL PROG
-0000   2801           00021                         GOTO    INICIO          ;SALTAR A LA ETIQUETA INICIO
-0001                  00022 INICIO
-0001   1683           00023                         BSF     STATUS,RP0      ;PONE EN 1 RP0 DEL STATUS
-0002   1703           00024                         BSF     STATUS,RP1      ;PONE EN 1 RP1 DEL STATUS
-                      00025                         ;ESTAS DOS INSTRUCCIONES NOS MANDADN AL BANCO 3
-0003   0186           00026                         CLRF    PORTB           ;PORTA COMO IN/OUT DIGITAL
+                      00015                         ;CONTA  EQU     0X20                    
+0000                  00016                         ORG     0X00                    ;INDICA EL ORIGEN DEL PROG
+0000   2801           00017                         GOTO    INICIO                  ;SALTAR A LA ETIQUETA INICIO
+0001                  00018 INICIO
+0001   1683           00019                         BSF     STATUS,RP0                      ;PONE EN 1 RP0 DEL STATUS
+0002   1703           00020                         BSF     STATUS,RP1                      ;PONE EN 1 RP1 DEL STATUS
+                      00021                                                                         ;ESTAS DOS INSTRUCCIONES NOS MAN
+                            DADN AL BANCO 3
+0003   0186           00022                         CLRF    PORTB                   ;PORTA COMO IN/OUT DIGITAL
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0004   0188           00027                         CLRF    ANSEL           ;PORTB COMO IN/OUT DIGITAL
+0004   0188           00023                         CLRF    ANSEL                   ;PORTB COMO IN/OUT DIGITAL
 Message[302]: Register in operand not in bank 0.  Ensure that bank bits are correct.
-0005   0189           00028                         CLRF    ANSELH          ;PORTB CONFIGURADO COMO OUT
-0006   1283           00029                         BCF     STATUS,RP0      ;PONE EN 0 RP0 DEL STATUS
-0007   1303           00030                         BCF     STATUS,RP1      ;PONE EN 0 RP1 DEL STATUS                               
-                                                                    
-                      00031                         ;MANDAN AL BANCO 0
-                      00032 
-0008   2088           00033 SELECT0         CALL            LEER
-0009   1D03           00034                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-000A   2848           00035                         GOTO    ENCENDER0
-000B   288B           00036                         GOTO    APAGAR
-000C   2088           00037 SELECT1         CALL            LEER
-000D   1D03           00038                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-000E   284C           00039                         GOTO    ENCENDER1
-000F   288B           00040                         GOTO    APAGAR
-0010   2088           00041 SELECT2         CALL            LEER
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE  2
+0005   0189           00024                         CLRF    ANSELH                  ;PORTB CONFIGURADO COMO OUT
+0006   1283           00025                         BCF     STATUS,RP0                      ;PONE EN 0 RP0 DEL STATUS
+0007   1303           00026                         BCF     STATUS,RP1                      ;PONE EN 0 RP1 DEL STATUS               
+                                                                                    
+                      00027                                                                         ;MANDAN AL BANCO 0
+0008                  00028 START 
+0008   0805           00029                         MOVF    PORTA,W                 ;LEER PRTA -> W
+0009   390F           00030                         ANDLW   B'00001111'             ;MULTIPLICAR MASCARA, OBTENEMOS EL VALOR
+000A   200D           00031                         CALL    DISPLAY
+000B   0086           00032                         MOVWF   PORTB
+000C   2808           00033                         GOTO    START
+                      00034 
+000D                  00035 DISPLAY 
+000D   0782           00036                         ADDWF PCL, F
+                      00037                         ;       0    1    2    3     4   5    6    7    8    9    A     B   C     D   E 
+                               F
+000E   343F 3406 345B 00038                         DT 0x3F,0X06,0X5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F,0x77,0x7C,0X39,0x5E,0x79,0x
+                            71 
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE  2
 
 
 LOC  OBJECT CODE     LINE SOURCE TEXT
   VALUE
 
-0011   1D03           00042                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-0012   2850           00043                         GOTO    ENCENDER2
-0013   288B           00044                         GOTO    APAGAR
-0014   2088           00045 SELECT3         CALL            LEER
-0015   1D03           00046                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-0016   2854           00047                         GOTO    ENCENDER3
-0017   288B           00048                         GOTO    APAGAR
-0018   2088           00049 SELECT4         CALL            LEER
-0019   1D03           00050                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-001A   2858           00051                         GOTO    ENCENDER4
-001B   288B           00052                         GOTO    APAGAR
-001C   2088           00053 SELECT5         CALL            LEER
-001D   1D03           00054                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-001E   285C           00055                         GOTO    ENCENDER5
-001F   288B           00056                         GOTO    APAGAR
-0020   2088           00057 SELECT6         CALL            LEER
-0021   1D03           00058                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-0022   2860           00059                         GOTO    ENCENDER6
-0023   288B           00060                         GOTO    APAGAR
-0024   2088           00061 SELECT7         CALL            LEER
-0025   1D03           00062                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-0026   2864           00063                         GOTO    ENCENDER7
-0027   288B           00064                         GOTO    APAGAR
-0028   2088           00065 SELECT8         CALL            LEER
-0029   1D03           00066                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-002A   2868           00067                         GOTO    ENCENDER8
-002B   288B           00068                         GOTO    APAGAR
-002C   2088           00069 SELECT9         CALL            LEER
-002D   1D03           00070                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-002E   286C           00071                         GOTO    ENCENDER9
-002F   288B           00072                         GOTO    APAGAR
-0030   2088           00073 SELECTA         CALL            LEER
-0031   1D03           00074                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-0032   2870           00075                         GOTO    ENCENDERA
-0033   288B           00076                         GOTO    APAGAR
-0034   2088           00077 SELECTb         CALL            LEER
-0035   1D03           00078                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-0036   2874           00079                         GOTO    ENCENDERb
-0037   288B           00080                         GOTO    APAGAR
-0038   2088           00081 SELECTC         CALL            LEER
-0039   1D03           00082                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-003A   2878           00083                         GOTO    ENCENDERC
-003B   288B           00084                         GOTO    APAGAR
-003C   2088           00085 SELECTd         CALL            LEER
-003D   1D03           00086                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-003E   287C           00087                         GOTO    ENCENDERd
-003F   288B           00088                         GOTO    APAGAR
-0040   2088           00089 SELECTE         CALL            LEER
-0041   1D03           00090                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-0042   2880           00091                         GOTO    ENCENDERE
-0043   288B           00092                         GOTO    APAGAR
-0044   2088           00093 SELECTF         CALL            LEER
-0045   1D03           00094                         BTFSS           STATUS,Z        ;CHECAR SI BIT Z = 1, DATO CORRECTO
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE  3
-
-
-LOC  OBJECT CODE     LINE SOURCE TEXT
-  VALUE
-
-0046   2884           00095                         GOTO    ENCENDERF
-0047   288B           00096                         GOTO    APAGAR
-                      00097 
-0048   303F           00098 ENCENDER0       MOVLW   B'00111111'     ;0
-0049   0086           00099                         MOVWF   PORTB                   
-004A   208D           00100                         CALL    TIME
-004B   280C           00101                         GOTO    SELECT1
-004C   3006           00102 ENCENDER1       MOVLW   B'00000110'     ;1
-004D   0086           00103                         MOVWF   PORTB
-004E   208D           00104                         CALL    TIME
-004F   2810           00105                         GOTO    SELECT2                 
-0050   305B           00106 ENCENDER2       MOVLW   B'01011011'     ;2
-0051   0086           00107                         MOVWF   PORTB                   
-0052   208D           00108                         CALL    TIME
-0053   2814           00109                         GOTO    SELECT3 
-0054   304F           00110 ENCENDER3       MOVLW   B'01001111'     ;3
-0055   0086           00111                         MOVWF   PORTB
-0056   208D           00112                         CALL    TIME
-0057   2818           00113                         GOTO    SELECT4 
-0058   3066           00114 ENCENDER4       MOVLW   B'01100110'     ;4
-0059   0086           00115                         MOVWF   PORTB
-005A   208D           00116                         CALL    TIME
-005B   281C           00117                         GOTO    SELECT5 
-005C   306D           00118 ENCENDER5       MOVLW   B'01101101'     ;5
-005D   0086           00119                         MOVWF   PORTB
-005E   208D           00120                         CALL    TIME
-005F   2820           00121                         GOTO    SELECT6 
-0060   307D           00122 ENCENDER6       MOVLW   B'01111101'     ;6
-0061   0086           00123                         MOVWF   PORTB
-0062   208D           00124                         CALL    TIME
-0063   2824           00125                         GOTO    SELECT7 
-0064   3007           00126 ENCENDER7       MOVLW   B'00000111'     ;7
-0065   0086           00127                         MOVWF   PORTB
-0066   208D           00128                         CALL    TIME
-0067   2828           00129                         GOTO    SELECT8 
-0068   307F           00130 ENCENDER8       MOVLW   B'01111111'     ;8
-0069   0086           00131                         MOVWF   PORTB
-006A   208D           00132                         CALL    TIME
-006B   282C           00133                         GOTO    SELECT9 
-006C   306F           00134 ENCENDER9       MOVLW   B'01101111'     ;9
-006D   0086           00135                         MOVWF   PORTB
-006E   208D           00136                         CALL    TIME
-006F   2830           00137                         GOTO    SELECTA 
-0070   3077           00138 ENCENDERA       MOVLW   B'01110111'     ;A
-0071   0086           00139                         MOVWF   PORTB
-0072   208D           00140                         CALL    TIME
-0073   2834           00141                         GOTO    SELECTb
-0074   307C           00142 ENCENDERb   MOVLW       B'01111100'     ;b
-0075   0086           00143                         MOVWF   PORTB
-0076   208D           00144                         CALL    TIME
-0077   2838           00145                         GOTO    SELECTC 
-0078   3039           00146 ENCENDERC       MOVLW   B'00111001'     ;C
-0079   0086           00147                         MOVWF   PORTB
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE  4
-
-
-LOC  OBJECT CODE     LINE SOURCE TEXT
-  VALUE
-
-007A   208D           00148                         CALL    TIME
-007B   283C           00149                         GOTO    SELECTd 
-007C   305E           00150 ENCENDERd       MOVLW   B'01011110'     ;d
-007D   0086           00151                         MOVWF   PORTB
-007E   208D           00152                         CALL    TIME
-007F   2840           00153                         GOTO    SELECTE
-0080   3079           00154 ENCENDERE       MOVLW   B'01111001'     ;E
-0081   0086           00155                         MOVWF   PORTB
-0082   208D           00156                         CALL    TIME
-0083   2844           00157                         GOTO    SELECTF 
-0084   3071           00158 ENCENDERF       MOVLW   B'01110001'     ;F
-0085   0086           00159                         MOVWF   PORTB
-0086   208D           00160                         CALL    TIME
-0087   2808           00161                         GOTO    SELECT0                 
-                      00162                         
-0088   0805           00163 LEER            MOVF            PORTA,W         ;MOVER PORTA -> W       
-0089   3A00           00164                         XORLW           0X00            ;HACER LA COMPARACIÓN DE VALORES
-008A   0008           00165                         RETURN
-                      00166                         
-                      00167 
-008B   0186           00168 APAGAR          CLRF    PORTB
-008C   2808           00169                         GOTO    SELECT0                 
-                      00170 
-                      00171 
-008D   3064           00172 TIME                    MOVLW   .100
-008E   00A0           00173                         MOVWF   R0
-008F   3032           00174                         MOVLW   .50
-0090   00A1           00175                         MOVWF   R1
-0091   3002           00176                         MOVLW   .2
-0092   00A2           00177                         MOVWF   R2
-                      00178 
-0093   0BA0           00179 AQUI                    DECFSZ  R0,F
-0094   2893           00180                         GOTO    AQUI
-0095   0BA1           00181                         DECFSZ  R1,F
-0096   2893           00182                         GOTO    AQUI
-0097   0BA2           00183                         DECFSZ  R2,F
-0098   2893           00184                         GOTO    AQUI
-0099   0008           00185                         RETURN
-                      00186                         END
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE  5
+       344F 3466 346D 
+       347D 3407 347F 
+       346F 3477 347C 
+       3439 345E 3479 
+       3471 
+                      00039                         END
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE  3
 
 
 SYMBOL TABLE
@@ -258,8 +107,6 @@ ANS8                              00000000
 ANS9                              00000001
 ANSEL                             00000188
 ANSELH                            00000189
-APAGAR                            0000008B
-AQUI                              00000093
 BAUDCTL                           00000187
 BCLIE                             00000003
 BCLIF                             00000003
@@ -279,14 +126,14 @@ BRG4                              00000004
 BRG5                              00000005
 BRG6                              00000006
 BRG7                              00000007
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE  6
+BRG8                              00000000
+BRG9                              00000001
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE  4
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-BRG8                              00000000
-BRG9                              00000001
 BRGH                              00000002
 C                                 00000000
 C1CH0                             00000000
@@ -338,14 +185,14 @@ CCPR2H                            0000001C
 CCPR2L                            0000001B
 CHS0                              00000002
 CHS1                              00000003
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE  7
+CHS2                              00000004
+CHS3                              00000005
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE  5
 
 
 SYMBOL TABLE
   LABEL                             VALUE 
 
-CHS2                              00000004
-CHS3                              00000005
 CKE                               00000006
 CKP                               00000004
 CM1CON0                           00000107
@@ -360,6 +207,7 @@ DC1B0                             00000004
 DC1B1                             00000005
 DC2B0                             00000004
 DC2B1                             00000005
+DISPLAY                           0000000D
 D_A                               00000005
 D_NOT_A                           00000005
 ECCPAS                            0000009C
@@ -377,32 +225,10 @@ EEDATH                            0000010E
 EEIE                              00000004
 EEIF                              00000004
 EEPGD                             00000007
-ENCENDER0                         00000048
-ENCENDER1                         0000004C
-ENCENDER2                         00000050
-ENCENDER3                         00000054
-ENCENDER4                         00000058
-ENCENDER5                         0000005C
-ENCENDER6                         00000060
-ENCENDER7                         00000064
-ENCENDER8                         00000068
-ENCENDER9                         0000006C
-ENCENDERA                         00000070
-ENCENDERC                         00000078
-ENCENDERE                         00000080
-ENCENDERF                         00000084
-ENCENDERb                         00000074
-ENCENDERd                         0000007C
 F                                 00000001
 FERR                              00000002
 FSR                               00000004
 FVREN                             00000000
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE  8
-
-
-SYMBOL TABLE
-  LABEL                             VALUE 
-
 GCEN                              00000007
 GIE                               00000007
 GO                                00000001
@@ -420,6 +246,12 @@ INTE                              00000004
 INTEDG                            00000006
 INTF                              00000001
 IOCB                              00000096
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE  6
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
 IOCB0                             00000000
 IOCB1                             00000001
 IOCB2                             00000002
@@ -432,7 +264,6 @@ IRCF0                             00000004
 IRCF1                             00000005
 IRCF2                             00000006
 IRP                               00000007
-LEER                              00000088
 LTS                               00000001
 MC1OUT                            00000007
 MC2OUT                            00000006
@@ -456,12 +287,6 @@ NOT_RBPU                          00000007
 NOT_RC8                           00000006
 NOT_T1SYNC                        00000002
 NOT_TO                            00000004
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE  9
-
-
-SYMBOL TABLE
-  LABEL                             VALUE 
-
 NOT_TX8                           00000006
 NOT_W                             00000002
 NOT_WRITE                         00000002
@@ -480,6 +305,12 @@ PCLATH                            0000000A
 PCON                              0000008E
 PDC0                              00000000
 PDC1                              00000001
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE  7
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
 PDC2                              00000002
 PDC3                              00000003
 PDC4                              00000004
@@ -511,16 +342,7 @@ PULSR                             00000002
 PULSS                             00000003
 PWM1CON                           0000009B
 R                                 00000002
-R0                                00000020
-R1                                00000021
-R2                                00000022
 RA0                               00000000
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE 10
-
-
-SYMBOL TABLE
-  LABEL                             VALUE 
-
 RA1                               00000001
 RA2                               00000002
 RA3                               00000003
@@ -542,6 +364,12 @@ RC0                               00000000
 RC1                               00000001
 RC2                               00000002
 RC3                               00000003
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE  8
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
 RC4                               00000004
 RC5                               00000005
 RC6                               00000006
@@ -574,34 +402,12 @@ RP1                               00000006
 RSEN                              00000001
 RX9                               00000006
 RX9D                              00000000
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE 11
-
-
-SYMBOL TABLE
-  LABEL                             VALUE 
-
 R_NOT_W                           00000002
 R_W                               00000002
 S                                 00000003
 SBOREN                            00000004
 SCKP                              00000004
 SCS                               00000000
-SELECT0                           00000008
-SELECT1                           0000000C
-SELECT2                           00000010
-SELECT3                           00000014
-SELECT4                           00000018
-SELECT5                           0000001C
-SELECT6                           00000020
-SELECT7                           00000024
-SELECT8                           00000028
-SELECT9                           0000002C
-SELECTA                           00000030
-SELECTC                           00000038
-SELECTE                           00000040
-SELECTF                           00000044
-SELECTb                           00000034
-SELECTd                           0000003C
 SEN                               00000000
 SENDB                             00000003
 SMP                               00000007
@@ -617,6 +423,12 @@ SSPBUF                            00000013
 SSPCON                            00000014
 SSPCON2                           00000091
 SSPEN                             00000005
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE  9
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
 SSPIE                             00000003
 SSPIF                             00000003
 SSPM0                             00000000
@@ -626,6 +438,7 @@ SSPM3                             00000003
 SSPMSK                            00000093
 SSPOV                             00000006
 SSPSTAT                           00000094
+START                             00000008
 STATUS                            00000003
 STRA                              00000000
 STRB                              00000001
@@ -633,12 +446,6 @@ STRC                              00000002
 STRD                              00000003
 STRSYNC                           00000004
 SWDTEN                            00000000
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE 12
-
-
-SYMBOL TABLE
-  LABEL                             VALUE 
-
 SYNC                              00000004
 T0CS                              00000005
 T0IE                              00000005
@@ -656,7 +463,6 @@ T1SYNC                            00000002
 T2CKPS0                           00000000
 T2CKPS1                           00000001
 T2CON                             00000012
-TIME                              0000008D
 TMR0                              00000001
 TMR0IE                            00000005
 TMR0IF                            00000002
@@ -676,6 +482,12 @@ TOUTPS0                           00000003
 TOUTPS1                           00000004
 TOUTPS2                           00000005
 TOUTPS3                           00000006
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE 10
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
 TRISA                             00000085
 TRISA0                            00000000
 TRISA1                            00000001
@@ -692,12 +504,6 @@ TRISB2                            00000002
 TRISB3                            00000003
 TRISB4                            00000004
 TRISB5                            00000005
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE 13
-
-
-SYMBOL TABLE
-  LABEL                             VALUE 
-
 TRISB6                            00000006
 TRISB7                            00000007
 TRISC                             00000087
@@ -735,6 +541,12 @@ TX9D                              00000000
 TXD8                              00000000
 TXEN                              00000005
 TXIE                              00000004
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE 11
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
 TXIF                              00000004
 TXREG                             00000019
 TXSTA                             00000098
@@ -751,12 +563,6 @@ VR3                               00000003
 VRCON                             00000097
 VREN                              00000007
 VROE                              00000006
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE 14
-
-
-SYMBOL TABLE
-  LABEL                             VALUE 
-
 VRR                               00000005
 VRSS                              00000004
 W                                 00000000
@@ -794,6 +600,12 @@ _BOR_ON                           00003FFF
 _BOR_SBODEN                       00003DFF
 _CONFIG1                          00002007
 _CONFIG2                          00002008
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE 12
+
+
+SYMBOL TABLE
+  LABEL                             VALUE 
+
 _CPD_OFF                          00003FFF
 _CPD_ON                           00003F7F
 _CP_OFF                           00003FFF
@@ -810,12 +622,6 @@ _FCMEN_OFF                        000037FF
 _FCMEN_ON                         00003FFF
 _FOSC_EC                          00003FFB
 _FOSC_EXTRC_CLKOUT                00003FFF
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE 15
-
-
-SYMBOL TABLE
-  LABEL                             VALUE 
-
 _FOSC_EXTRC_NOCLKOUT              00003FFE
 _FOSC_HS                          00003FFA
 _FOSC_INTRC_CLKOUT                00003FFD
@@ -850,24 +656,18 @@ _WRT_HALF                         000039FF
 _WRT_OFF                          00003FFF
 _XT_OSC                           00003FF9
 __16F887                          00000001
+MPASM  5.44                     PRACTICA5.ASM   10-23-2023  15:15:04         PAGE 13
 
 
 MEMORY USAGE MAP ('X' = Used,  '-' = Unused)
 
-0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
-0040 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXX
-0080 : XXXXXXXXXXXXXXXX XXXXXXXXXX------ ---------------- ----------------
+
+0000 : XXXXXXXXXXXXXXXX XXXXXXXXXXXXXX-- ---------------- ----------------
 
 All other memory blocks unused.
 
-Program Memory Words Used:   154
-Program Memory Words Free:  8038
-
-
-MPASM  5.44                    PRACTICA_7.ASM   11-23-2023  15:15:25         PAGE 16
-
-
-
+Program Memory Words Used:    30
+Program Memory Words Free:  8162
 
 
 Errors   :     0
